@@ -6,10 +6,10 @@ jobs:
     run-testimio-cli:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
             - uses: actions/setup-node@v4
               with:
-                node-version: 'lts'
+                node-version: '18'
                 # You can also change 'lts' to any supported LTS Node.js version.
             - run: npm install -g @testim/testim-cli
             - run: testim --token "FhWpoM5ezR5kvXYN4BgDkHkj5ijEXmjuUnugYYapkPxgkYkeKY" --project "yUHggaUM53fuXM0PejOu" --grid "Testim-Grid" --suite "AirTicket" --base-url "https://9e25-167-103-28-168.ngrok-free.app"
